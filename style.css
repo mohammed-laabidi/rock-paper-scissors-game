@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: #2D3B48;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-y: auto;
+}
+
+h1,h3,.result{
+    color: #757474;
+}
+
+h1{
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 32px;
+}
+
+.box_game{
+    display: flex;
+}
+
+.box_player,.box_comp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hands img,#hand_player{
+    transform: rotateY(180deg);
+}
+
+.hand_choice{
+    width: 500px;
+    position: relative;
+}
+
+@keyframes hand_animation {
+    0%{
+        top: -20px;
+    }100%{
+        top: 20px;
+    }
+}
+
+.hands img{
+    width: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hands img:hover{
+    width: 120px;
+}
+
+.result{
+    margin: 0px 20px;
+    display: grid;
+    place-items: center;
+}
+
+.result h2{
+    position: relative;
+    top: 30px;
+    font-size: 120px;
+    color: gold
+}
+
+.result div{
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+#btn_replay{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#btn_replay:hover{
+    background-color: transparent;
+    border: 2px solid red;
+    cursor: pointer;
+    color:red;
+}
+
+@media (max-width: 992px) {
+    .hand_choice{
+        width: 320px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .result h2{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box_game{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .hand_choice{
+        width: 260px;
+        max-width: 80vw;
+    }
+
+    .hands img{
+        width: 80px;
+        max-width: 24vw;
+    }
+
+    .hands img:hover{
+        width: 90px;
+    }
+
+    .result{
+        margin: 0;
+    }
+
+    .result h2{
+        top: 0;
+        font-size: 60px;
+    }
+
+    .result div{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hand_choice{
+        width: 200px;
+        max-width: 70vw;
+    }
+
+    .hands img{
+        width: 70px;
+        max-width: 22vw;
+    }
+
+    .hands img:hover{
+        width: 80px;
+    }
+
+    .box_game{
+        gap: 20px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .result h2{
+        font-size: 48px;
+    }
+
+    .result div{
+        font-size: 16px;
+    }
+
+    #btn_replay{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+

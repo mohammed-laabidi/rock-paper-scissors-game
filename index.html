@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Game Build Rock Paper</h1>
+
+        <div class="box_game">
+            <div class="box_player">
+                <div class="img">
+                    <img src="images/rock_hand.png" alt="no-image" id="hand_player" class="hand_choice">
+                </div>
+
+                <h3>You</h3>
+
+                <div class="hands">
+                    <img onclick="game(this.id)" src="images/paper_hand.png" id="paper" alt="no-image">
+                    <img onclick="game(this.id)" src="images/rock_hand.png" id="rock" alt="no-image">
+                    <img onclick="game(this.id)" src="images/scissors_hand.png" id="scissor" alt="no-image">
+                </div>
+            </div>
+
+            <div class="result">
+                <h2>VS</h2>
+                <div>You <strong><span id="res_player">0</span>/<span id="res_comp">0</span></strong> Computer</div>
+            </div>
+
+            <div class="box_comp">
+                <div class="img">
+                    <img src="images/rock_hand.png" alt="no-image" id="hand_comp" class="hand_choice">
+                </div>
+
+                <h3>Computer</h3>
+
+            </div>
+
+        </div>
+
+        <button id="btn_replay" onclick="location.reload()">Replay</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
